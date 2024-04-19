@@ -1,0 +1,14 @@
+{
+  "name": "06-give-me-more",
+  "version": "1.0.0",
+  "description": "Create a simple API that have two endpoints (get user, get users) that retrieves information about a collection of users and a specific user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
