@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Fetch JSON data from URL</h2>
+
+    <button onclick="fetchData()">Fetch Data</button>
+    <button onclick="destroyData()">Destroy Data</button>
+
+    <p id="result"></p>
+
+    <script>
+        function fetchData() {
+            fetch('http://localhost:3000/resources')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('result').innerHTML = JSON.stringify(data, null, 2);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function destroyData() {
+            fetch('http://localhost:3000/destroy')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('result').innerHTML = JSON.stringify(data, null, 2);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+
+</body>
+
+</html>

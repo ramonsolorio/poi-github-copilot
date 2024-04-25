@@ -20,3 +20,9 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' = {
 }
 
 output resourceGroupName string = resourceGroup.name
+
+//Print command line usage
+//az deployment sub create --name rg-deployment-test --location east-us --template-file main.bicep --parameters resourceGroupName=RG1 
+
+//Print command line example to destroy bicep resources
+//az deployment sub delete --name rg-deployment-test --yes --no-wait --verbose
